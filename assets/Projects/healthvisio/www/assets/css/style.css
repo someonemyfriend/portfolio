@@ -1,0 +1,108 @@
+
+
+
+/* === Start Navbar Block ===*/
+
+.navbar.fixed-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1030;
+}
+
+.navbar-light .navbar-toggler {
+    position: fixed;
+    left: 15px;
+}
+
+.block-header .app-style-nav {
+background-color: #DBF1EA;
+border-bottom-left-radius: 25px;
+border-top-right-radius: 20px !important;
+position: absolute;
+left: 0;
+top: 4rem;
+height: 100vh;
+}
+
+.block-header .app-style-nav .nav-item a.nav-link{
+    color: black !important;
+    font-size: 34px;
+    padding: 0.5rem 1.5rem;
+}
+
+.block-header .app-style-nav ul > li:last-child{
+    position: fixed;
+    bottom: 0;
+}
+
+/* === End Navbar Block ===*/
+
+.block-main {
+    margin-left: 34px;
+    margin-right: 253px;
+}
+
+.block-section .container {
+    margin-left: 5%;
+}
+
+/* === Start ADD NEW Consultation ===*/
+.block-style-new-consultation .border {
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    margin: 1rem;
+}
+
+.formBox{
+    padding: 0.5rem 2rem;
+}
+
+/* === END ADD NEW  Consultation ===*/
+
+/* === Start Block Sheduled Consultation ===*/
+.block-consutation-sheduled {
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    /* width: fit-content; */
+}
+.block-consutation-sheduled .style-newConsultation-sheduled-list {
+    padding: 1rem;
+}
+
+.style-newConsultation-sheduled-list{
+    border-bottom: 1px solid #27ce99;
+}
+
+.style-newConsultation-sheduled-list:last-child{
+    border-bottom: 0px solid #ffffff00;
+}
+/* === End Block Sheduled Consultation ===*/
+
+footer{
+background-color: #DBF1EA;
+position: fixed;
+right: 0;
+top: 4rem;
+height: 100vh;
+}
+
+
+
+
+/* Media Query */
+
+@media only screen and (min-width: 1054px) {
+    body {
+      /* background-color: rgb(218, 255, 239); */
+    }
+  }
+
+
+@media only screen and (min-width: 992px) {
+    .block-main  {
+        margin-left: 43px;
+        margin-right: 289px;
+    }
+  }

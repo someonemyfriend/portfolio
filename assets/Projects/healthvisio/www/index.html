@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthvisio</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- <h2>JavaScript Can Validate Input</h2>
+
+    <p>Please input a number between 1 and 10:</p>
+
+    <input id="numb">
+
+    <button type="button" onclick="myFunction()">Submit</button>
+
+    <p id="demo"></p>
+
+
+
+    <button id="json_btn">Get JSON data</button>
+    <div></div> -->
+    
+
+
+<header class="block-header d-flex align-items-start">
+    <nav class="navbar navbar-expand-lg navbar-light flex-column fixed-left">
+        <!-- <a class="navbar-brand" href="#">Healthvisio</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse flex-column app-style-nav" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto flex-column">
+            <li class="nav-item active mt-5">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-home"></i> 
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-columns"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-file-medical-alt"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><i class="fas fa-question-circle"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-cog"></i></a>
+            </li>                
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main class="block-main">
+    <section class="horizontal-navbar">
+        <div class="container">
+            <div class="row">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Start Block New Consultation -->
+    <section class="block-section block-style-new-consultation">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-sm-12 border border-success">
+                    <h1>Hello</h1>
+                </div>
+                <div class="col-xl-4 col-sm-12 border border-success">
+                    <form id="form_consultation">
+                        <div class="formBox">
+                            <label for="title">Name</label>
+                            <input type="text" id="title" placeholder="Title"/>
+                        </div>
+                        <div class="formBox">
+                            <label for="yr">Years</label>
+                            <input type="number" id="yr" placeholder="Year"/>
+                        </div>
+                        <div class="formBox">
+                            <button id="btn" class="btn btn-outline-success">
+                            <!-- <button id="btn" value="Reset"> -->
+                            Add Consultation
+                            </button>
+                        </div>
+                        <!-- <div id="msg">
+                            <pre></pre>
+                        </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Block New Consultation -->
+    
+    <!-- Start Block Sheduled Consultation List -->
+    <section class="block-section block-consutation-sheduled">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-11 col-sm-12 border border-success rounded">
+                    <div id="printHere"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Block Sheduled Consultation List -->
+</main>
+<footer>
+    
+    <div class="container">
+        <div class="row">
+            <div class="span12 m-3">
+                <table class="table-condensed table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="7" >
+                            <a class="btn"><i class="icon-chevron-left"></i></a>
+                            <a class="btn">February 2012</a>
+                            <a class="btn"><i class="icon-chevron-right"></i></a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Su</th>
+                            <th>Mo</th>
+                            <th>Tu</th>
+                            <th>We</th>
+                            <th>Th</th>
+                            <th>Fr</th>
+                            <th>Sa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="muted">29</td>
+                            <td class="muted">30</td>
+                            <td class="muted">31</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td><strong>20</strong></td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td class="muted">1</td>
+                            <td class="muted">2</td>
+                            <td class="muted">3</td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </div>
+        </div>
+        <div class="row">
+            <div>hello</div>
+        </div>
+    </div>
+</footer>
+
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+
+</body>
+</html>
