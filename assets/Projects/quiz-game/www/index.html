@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz App</title>
+
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+<body>
+    <div class="qiuz-game">  
+        <!-- ko ifnot: isGameStarted-->
+        <div data-bind="template: { name: 'start-template', data: $data }"></div>
+        <!-- /ko -->
+        <!-- ko if: isGameStarted -->
+        <div data-bind="template: { name: 'game-template', data: $data }"></div>
+        <!-- /ko -->
+        <div id="bg-style" class="background">
+            <div class="position-all">
+                <span class="dot animate__animated animate__bounceInLeft"></span>
+                <img class="stars-dot-three" src="assets/img/svg/Asset 9.svg" alt="" srcset="">
+                <img class="stars-dot" src="assets/img/svg/Asset 7.svg" alt="" srcset="">
+                <img class="planet-tree animate__animated animate__backInUp" src="assets/img/svg/Asset 3.svg" alt="" srcset="">
+                <img class="planet-four animate__animated animate__backInDown" src="assets/img/svg/Asset 4.svg" alt="" srcset="">
+            </div>
+            <div>
+                    <img class="stars-dot-behind" src="assets/img/svg/Asset 8.svg" alt="" srcset="">
+                <span class="doot animate__animated  animate__bounceInRight"></span>
+                <img class="planet-two animate__animated animate__backInDown" src="assets/img/svg/Asset 2.svg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/html" id="start-template">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a href="#" id="logoPosition" class="logo animate__animated animate__zoomInDown" data-bind="class: isGameStarted() ? 'logo-change' : '' ">
+                            <img class="rocket" src="assets/img/svg/svg/logo.svg" alt="" srcset="">
+                            <!-- <span>uiz</span> -->
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="controls">
+                            <button id="start-btn" data-bind="click: startQuiz" class="start-btn btn">Start</button>
+                            <div class="btn-decor"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </script>
+
+    <script type="text/html" id="game-template">
+            <div class="logo-position">
+                <a href="#" id="logoPosition" class="logo-change">
+                    <img class="rocket" src="assets/img/svg/svg/logo.svg" alt="" srcset="">
+                    <!-- <span>uiz</span> -->
+                </a>
+            </div>
+             <!-- ko if: loadingData -->
+            <div class="loading"></div>
+             <!-- /ko -->
+             <!-- ko ifnot: loadingData -->
+            <div class="container">
+                <!-- ko ifnot: showScore -->
+                 <div>
+                     <!-- ko ifnot: showDescription -->
+                    <div data-bind="template: { name: 'question-template' }"></div>
+                    <!-- /ko -->
+                    <!-- ko if: showDescription -->
+                    <div data-bind="template: { name: 'description-template'}"></div>
+                    <!-- /ko -->
+                 </div>
+                 <!-- /ko -->
+                 <!-- ko if: showScore -->
+                <div data-bind="template: { name: 'final-template'}"></div>
+                <!-- /ko -->
+            </div>
+             <!-- /ko -->   
+    </script>
+
+    <script type="text/html" id="question-template">
+        <div class="" id="question-container">
+            <span  data-bind="text: currentQuestion().question" class="question-style"></span>
+            <div data-bind="foreach: currentQuestion().answers"  class="btn-grid flex-pos">
+                <div class="btn-decor">
+                    <button id="answer-buttons" class="btn-grid btn space-around" 
+                    data-bind="text: text, click: $parent.selectAnswer.bind($parent, $data)"></button>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="description-template">
+        <div class="container">
+            <div class="container" id="question-container">
+                <span data-bind="text: title" class="question-style"></span>
+                <span data-bind="text: currentQuestion().description">
+            </div>
+            <button id="next-btn" class="next-btn" data-bind="click: showNextQuestion">Next</button>
+        </div>
+    </script>
+
+    <script type="text/html" id="final-template">
+        <div id="question-container">
+            <span data-bind="text: finalMessage" class="question-style"></span>
+            <button id="next-btn" class="next-btn" data-bind="click: restartQuiz">PLay again</button>
+        </div>
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

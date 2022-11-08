@@ -1,0 +1,44 @@
+{ "questions" :
+    [
+        {
+            "question": "1. What is the correct HTML element for inserting a line break?",
+            "answers": [
+                { "text": "<br>", "correct": true },
+                { "text": "<break>", "correct": false }
+            ],
+            "description": ""
+        },
+        {
+            "question": "2. Choose the correct HTML element to define important text",
+            "answers": [
+                { "text": "<strong>","correct": true },
+                { "text": "<i>", "correct": false }
+            ],
+            "description": ""
+        },
+        {
+            "question": "3. Which character is used to indicate an end tag?",
+            "answers": [
+                {"text": "/","correct": true },
+                {"text": "^","correct": false }
+            ],
+            "description": ""
+        },
+        {
+            "question": "4. How can you make a numbered list?",
+            "answers": [
+                {"text": "<dl>","correct": false },
+                {"text": "<ol>","correct": true }
+            ],
+            "description": ""
+        },
+        {
+            "question": "5. HTML comments start with <!-- and end with -->",
+            "answers": [
+                {"text": "False","correct": false },
+                {"text": "True","correct": true }
+            ],
+            "description": ""
+        }
+    ]
+}

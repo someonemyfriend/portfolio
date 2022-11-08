@@ -1,0 +1,101 @@
+/* import fonts from fonts.css file */
+@import url(./font.css);
+
+/* css  variables */
+@import url(./partials/_variables.css);
+
+/* import globle style */
+@import url(./partials/_globle.css);
+
+
+/* START block-header */
+
+.block-header.menu.navbar .navbar-brand {
+    padding: 0 2rem 0 5rem;
+}
+
+.block-header .menu .navbar{
+    padding: 1rem 20rem;
+}
+
+.block-header .menu .nav-item .nav-link {
+    font: normal 300 12px/2px var(--roboto);
+    text-transform: uppercase;
+    padding: 1.7rem;
+    color: var(--title-color);
+}
+
+
+.block-header .menu .navbar-nav .nav-item.active {
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.block-header .menu .navbar-nav a:hover {
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* END block-header */
+
+/* START Hero Block */
+
+/* .block-main .block-hero { */
+    /* background: url(../img/ssquiggles-colorful.png) no-repeat 98% 131%; */
+/* } */
+
+.block-main .block-hero .site-title h3 {
+    padding-top: 35%;
+    font-weight: 300;
+}
+
+.block-main .block-hero .site-title h3::after {
+    content: '';
+    height: 2px;
+    width: 10.3vw;
+    background: black;
+    display: inline-block;
+    margin-left: 1%;
+    transform: translateY(-10px);
+}
+
+.block-main .block-hero .site-title h1 {
+    font-size: 2.45rem;
+    font-weight: 900;
+}
+
+.block-main .block-hero .site-title h4 {
+    font-size: 1.14rem;
+    font-weight: 100;
+}
+
+.block-main .block-hero .hero-img > img{
+    padding: 7rem 0;
+    width: 90rem;
+}
+
+/* END Hero Block */
+
+/* Start Block About */
+
+.block-main .block-about {
+    padding: 8rem 5rem;
+}
+
+.block-main .block-about .about-title h2 > span {
+    display: block;
+    font: 2.45rem/60px var(--roboto);
+    font-weight: 900; 
+    /* letter-spacing: 21px; */
+ } 
+
+.block-main .block-about .about-title h2 span:first-child {
+    font: 24px/60px var(--roboto);
+    font-weight: 100;
+}
+
+/* End Block About */

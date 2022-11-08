@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+
+.remove-btn {
+  display: none;
+}
+
+.loading {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.qiuz-game {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.qiuz-game .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.qiuz-game .logo .rocket {
+  margin-right: -20px;
+  width: 16%;
+}
+
+.qiuz-game .question-style {
+  font-size: 19px;
+  color: #908888;
+  font-weight: 600;
+  line-height: 240%;
+}
+
+@media screen and (max-width: 768px) {
+  .qiuz-game .question-style {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+.qiuz-game .btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  text-decoration: none;
+  border: 1px solid;
+  margin-left: 80px;
+  margin-top: -22px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .qiuz-game .btn {
+    width: 80px;
+    height: 80px;
+    margin-left: 31px;
+    margin-top: 180px;
+  }
+}
+
+.qiuz-game .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.qiuz-game .controls .start-btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  text-decoration: none;
+  border: 1px solid;
+  background-color: #fff;
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 61px;
+  z-index: 1;
+}
+
+.qiuz-game .controls .btn-decor {
+  background: url(../img/svg/around-btn.svg) no-repeat;
+  width: 354px;
+  height: 354px;
+  position: relative;
+  bottom: 33px;
+  left: 26px;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .qiuz-game .controls .btn-decor {
+    background: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.qiuz-game .next-btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  text-decoration: none;
+  border: 1px solid;
+  margin-top: 5em;
+  background-color: #fff;
+}
+
+.qiuz-game .wrong {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-decoration: none;
+  border: 3px solid;
+  background-color: #9c3232;
+}
+
+.qiuz-game .right {
+  background: #3e9c32;
+}
+
+.logo-position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.logo-position .logo-change {
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+  margin: 20px 0px !important;
+  font-size: 3.5em;
+  color: #161817;
+  height: 107px;
+  padding: 0 20px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo-position .logo-change span {
+  margin-left: -28px;
+}
+
+.logo-position .logo-change .rocket {
+  width: 55px;
+  margin-right: 24px;
+  margin-bottom: 45px;
+}
+
+#question-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50vw;
+  text-align: center;
+}
+
+.flex-pos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 40em;
+  height: 24em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-pos {
+    width: 0em;
+    height: 0em;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.background {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.background .doot {
+  height: 45em;
+  position: absolute;
+  bottom: -30em;
+  left: -10em;
+  width: 45em;
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: 1;
+  display: inline-block;
+  -webkit-box-shadow: 15px -9px 37px -11px rgba(0, 0, 0, 0.15);
+          box-shadow: 15px -9px 37px -11px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .background .doot {
+    bottom: -33em;
+    left: -27em;
+  }
+}
+
+.background .planet-two {
+  position: relative;
+  width: 171px;
+  height: auto;
+  top: 161px;
+  z-index: -1;
+  right: -151px;
+}
+
+@media screen and (max-width: 768px) {
+  .background .planet-two {
+    display: none;
+  }
+}
+
+.background .stars-dot-behind {
+  position: absolute;
+  bottom: 147px;
+  width: 7em;
+  height: auto;
+  left: 166px;
+  z-index: 9;
+}
+
+@media screen and (max-width: 768px) {
+  .background .stars-dot-behind {
+    display: none;
+  }
+}
+
+.background .position-all {
+  position: absolute;
+  right: 0;
+  height: 10px;
+  width: 10px;
+}
+
+.background .position-all .dot {
+  z-index: -1;
+  height: 90em;
+  position: relative;
+  top: -1009px;
+  right: 800px;
+  width: 90em;
+  background-color: #fffdfd;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-box-shadow: -13px 21px 31px -10px rgba(0, 0, 0, 0.15);
+          box-shadow: -13px 21px 31px -10px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+  .background .position-all .dot {
+    top: -319px;
+    right: 388px;
+    width: 34em;
+    height: 34em;
+  }
+}
+
+.background .position-all .stars-dot-three {
+  position: absolute;
+  bottom: -440px;
+  width: 5em;
+  height: auto;
+  left: -424px;
+}
+
+@media screen and (max-width: 768px) {
+  .background .position-all .stars-dot-three {
+    display: none;
+  }
+}
+
+.background .position-all .stars-dot {
+  position: absolute;
+  top: 170px;
+  width: 8em;
+  height: auto;
+  left: -297px;
+}
+
+@media screen and (max-width: 768px) {
+  .background .position-all .stars-dot {
+    display: none;
+  }
+}
+
+.background .position-all .planet-tree {
+  width: 225px;
+  height: auto;
+  bottom: -283px;
+  right: 56px;
+  z-index: -1;
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  .background .position-all .planet-tree {
+    display: none;
+  }
+}
+
+.background .position-all .planet-four {
+  width: 114px;
+  height: auto;
+  bottom: -115px;
+  z-index: -5;
+  left: -782px;
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  .background .position-all .planet-four {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
